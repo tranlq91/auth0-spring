@@ -1,0 +1,20 @@
+# src/main/resources/application.yml
+okta:
+  oauth2:
+    issuer: https://dev-odpi2us26d4v1doj.us.auth0.com/
+    client-id: { clientid }
+    client-secret: { client -secret}
+    audience: https://dev-odpi2us26d4v1doj.us.auth0.com/api/v2/
+    redirect-uri: {okta}
+
+# The sample and instructions above for the callback and logout URL configuration use port 3000.
+# If you wish to use a different port, change this and be sure your callback and logout URLs are
+# configured with the correct port.
+server:
+  port: 3000
+
+logging:
+  level:
+    root: ERROR
+    org.springframework.web: ERROR
+    com.auth0.example: TRACE
